@@ -1,3 +1,5 @@
+![BannerSBWeather](https://github.com/Sabristi/SB_WeatherCMP/blob/main/media/BannerSBWeather.jpg?raw=true)
+
 ## Introduction
 
 ## Deployment Kit
