@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>*</members> <!-- Retrieve all Apex classes -->
+        <name>ApexClass</name> <!-- Metadata type for Apex classes -->
+    </types>
+    <types>
+        <members>*</members> <!-- Retrieve all LWC components -->
+        <name>LightningComponentBundle</name> <!-- Metadata type for LWC components -->
+    </types>
+    <types>
+        <members>PlatformCachePartition</members> <!-- Retrieve Platform Cache partitions -->
+        <name>PlatformCachePartition</name> <!-- Metadata type for Platform Cache partitions -->
+    </types>
+    <types>
+        <members>APIGeonames</members> <!-- Retrieve specific Named Credential -->
+        <name>NamedCredential</name> <!-- Metadata type for Named Credentials -->
+    </types>
+    <types>
+        <members>APIGoogle</members> <!-- Retrieve specific Named Credential -->
+        <name>NamedCredential</name> <!-- Metadata type for Named Credentials -->
+    </types>
+    <types>
+        <members>GeoNames</members> <!-- Retrieve specific Remote Site Setting -->
+        <name>RemoteSiteSetting</name> <!-- Metadata type for Remote Site Settings -->
+    </types>
+    <types>
+        <members>GoogleAPI</members> <!-- Retrieve specific Remote Site Setting -->
+        <name>RemoteSiteSetting</name> <!-- Metadata type for Remote Site Settings -->
+    </types>
+    <types>
+        <members>APIKey__mdt</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>*</members> 
+        <name>CustomMetadata</name>
+    </types>
+    <types>
+        <members>Account.lastWeatherReportSent__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>StaticResource</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>PlatformCachePartition</name>
+    </types>
+    <version>53.0</version> <!-- API version -->
+</Package>

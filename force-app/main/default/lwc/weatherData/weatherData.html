@@ -1,0 +1,142 @@
+<template>
+    <!-- Weather Card -->
+    <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+            <!-- Card Header -->
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                    <!-- Weather Icon -->
+                    <span class="slds-icon_container slds-icon-standard-account" title="account">
+                        <lightning-icon size="small" class="standard-icon" icon-name="standard:location" alternative-text="Weather" title="Weather"></lightning-icon>
+                        <span class="slds-assistive-text">Weather</span>
+                    </span>
+                </div>
+                <div class="slds-media__body">
+                    <!-- Card Title -->
+                    <h2 class="slds-card__header-title">
+                        <a href="#" class="slds-card__header-link slds-truncate" title="Weather Observation">
+                            <span>Weather Observation</span>
+                        </a>
+                    </h2>
+                </div>
+                <div class="slds-no-flex">
+                    <!-- Send Report Button -->
+                    <template if:true={weatherData}>
+                        <button class="slds-button slds-button_neutral" onclick={sendWeatherReport}>Send Report</button>
+                    </template>
+                </div>
+            </header>
+        </div>
+
+        <template if:true={weatherData}>
+            <!-- Weather Details -->
+            <div class="weather-container">
+                <div class={getWeatherIconClass}>
+                    <!-- Weather Icon -->
+                    <img style="max-height: 400px" alt='{weatherData.weatherdescription}' src='{weatherSRC}' />
+                </div>
+                <div class="weather-details">
+                    <div class="weather-title">
+                        <!-- City and Country -->
+                        {weatherData.city}, {weatherData.countryCode}
+                        <img class="flag-icon" src={countryCodeSRC} width="20" alt={weatherData.countryCode}>
+                    </div>
+                    <div class="weather-temperature">
+                        <!-- Temperature -->
+                        {weatherData.temperature}°C
+                    </div>
+                    <div class="weather-info">
+                        <!-- Weather Info -->
+                        <div class="weather-info-item">
+                            <div class="weather-info-icon">
+                                <!-- Humidity Icon -->
+                                <lightning-icon size="small" class="custom-icon" icon-name="standard:water" alternative-text="Humidity" title="Humidity"></lightning-icon>
+                            </div>
+                            <div class="weather-info-label">Humidity :</div>
+                            <div class="weather-info-value">{weatherData.humidity}%</div>
+                        </div>
+                        <div class="weather-info-item">
+                            <div class="weather-info-icon">
+                                <!-- Wind Speed Icon -->
+                                <lightning-icon size="small" class="custom-icon" icon-name="standard:flow" alternative-text="Windspeed" title="Windspeed"></lightning-icon>
+                            </div>
+                            <span class="weather-info-label">Wind Speed :</span>
+                            <span class="weather-info-value">{weatherData.windspeed} m/s</span>
+                        </div>
+                        <div class="weather-info-item">
+                            <div class="weather-info-icon">
+                                <!-- Local Time Icon -->
+                                <lightning-icon size="small" class="custom-icon" icon-name="standard:date_time" alternative-text="Local Time" title="Local Time"></lightning-icon>
+                            </div>
+                            <span class="weather-info-label">Local Time :</span>
+                            <span class="weather-info-value">{weatherData.localTime}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <!-- Accordion -->
+        <lightning-accordion allow-multiple-sections-open active-section-name="" onsectiontoggle={handleSectionToggle}>
+            <lightning-accordion-section name="Search" label="Search">
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col">
+                        <!-- Radio Group for Search Options -->
+                        <lightning-radio-group name="radioGroup" label="" options={options} value={value} type="button" onchange={handleRadioChange}></lightning-radio-group>
+                    </div>
+                    <div class="slds-col">
+                        <!-- Search Button -->
+                        <lightning-button class="search-button" icon-name="utility:search" label="Search" variant="brand" onclick={fetchWeatherData}></lightning-button>
+                    </div>
+                </div>
+                <div>
+                    <div class="slds-grid slds-gutters">
+                        <div class="slds-col">
+                            <template if:true={cityFieldValue}>
+                                <!-- City Input -->
+                                <div class="slds-grid slds-gutters">
+                                    <div class="slds-col">
+                                        <div class={classError}>
+                                            <div class="slds-form-element__control">
+                                                <lightning-input onkeydown={handleKeyDown} data-id="cityInput" value={city} variant="label-hidden" placeholder="City" onchange={handleCityChange}></lightning-input>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="error-input" id="form-error-01">{error}</div>
+                            </template>
+                            <template if:true={coordinatesFieldValue}>
+                                <!-- Latitude and Longitude Inputs -->
+                                <div class="slds-grid slds-gutters">
+                                    <div class="slds-col">
+                                        <div class={classError}>
+                                            <div class="slds-form-element__control">
+                                                <lightning-input onkeydown={handleKeyDown} data-id="latitudeInput" value={latitude} variant="label-hidden" placeholder="Latitude" onchange={handleLatitudeChange}></lightning-input>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slds-col">
+                                        <div class={classError}>
+                                            <div class="slds-form-element__control">
+                                                <lightning-input onkeydown={handleKeyDown} data-id="longitudeInput" value={longitude} variant="label-hidden" placeholder="Longitude" onchange={handleLongitudeChange}></lightning-input>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="error-input" id="form-error-02">{error}</div>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+            </lightning-accordion-section>
+        </lightning-accordion>
+        <!---/ Accordion -->
+
+        <!-- Badge displaying the date time of Weather Last Report sending -->
+        <footer class="slds-card__footer">
+            <span class={badgestate}>{badgelabel}</span> {displayText}</p>
+        </footer>
+
+
+    </article>
+</template>

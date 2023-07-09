@@ -1,0 +1,104 @@
+.weather-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.weather-icon {
+    flex: 0 0 auto;
+    margin-right: 10px;
+    padding: 30px;
+    border-radius: 4px;
+    height: 100%;
+}
+
+.skyblue {
+
+    background-color: skyblue;
+
+}
+
+.midnightblue {
+
+    background-color: midnightblue;
+
+}
+
+.weather-details {
+    flex: 1 1 auto;
+}
+
+.weather-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+    float: right;
+    margin-right: 10px;
+}
+
+.weather-temperature {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.weather-info {
+    margin-top: 10px;
+}
+
+.weather-info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.weather-info-label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.weather-info-value {
+    font-weight: normal;
+}
+
+
+.radio-group-container {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.city-input-container {
+    flex: 1;
+}
+
+.lightning-input{
+    vertical-align: left;
+}
+    .weather-info-item {
+        display: flex;
+        align-items: center;
+    }
+
+    .weather-info-icon {
+        margin-right: 10px;
+    }
+
+.slds-gutters{
+    margin-top:7px;
+}
+
+.search-button{
+    float:right;
+    margin-top:5px;
+}
+
+.flag-icon{
+    margin-bottom:4px;
+    margin-left:3px;
+}
+
+.error-input{
+    color : red;
+    margin-left:5px;
+}
