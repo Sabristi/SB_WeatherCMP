@@ -3,10 +3,10 @@
     <isDefaultPartition>false</isDefaultPartition>
     <masterLabel>WeatherReport</masterLabel>
     <platformCachePartitionTypes>
-        <allocatedCapacity>5</allocatedCapacity>
+        <allocatedCapacity>1</allocatedCapacity>
         <allocatedPartnerCapacity>0</allocatedPartnerCapacity>
         <allocatedPurchasedCapacity>0</allocatedPurchasedCapacity>
-        <allocatedTrialCapacity>5</allocatedTrialCapacity>
+        <allocatedTrialCapacity>0</allocatedTrialCapacity>
         <cacheType>Organization</cacheType>
     </platformCachePartitionTypes>
     <platformCachePartitionTypes>
