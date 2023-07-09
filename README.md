@@ -29,8 +29,8 @@ In the terminal, using the cd command change your working directory to the clone
 The deployment process may take few seconds. Salesforce CLI will provide real-time feedback on the progress and results of the deployment.
 
 ## LWC Set Up
+### Home Page
+![HomePage setup](https://github.com/Sabristi/SB_WeatherCMP/blob/main/media/Weather4.jpg?raw=true)
 
-Home Page
-
-
-Account Record Page
+### Account Record Page
+![AccountRecordPage setup](https://github.com/Sabristi/SB_WeatherCMP/blob/main/media/Weather5.jpg?raw=true)
