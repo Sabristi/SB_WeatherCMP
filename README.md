@@ -2,6 +2,10 @@
 
 ## Introduction
 
+The Weather Info Component provides a convenient way to retrieve and display weather information within the Salesforce platform, both as a standalone component on the homepage and as an integrated feature in the Account layout. The ability to send weather reports and track their delivery adds value to the solution. Furthermore, the extension to a web page offers flexibility for users outside of the Salesforce environment to access the weather information component.
+
+![Screenshot2](https://github.com/Sabristi/SB_WeatherCMP/blob/main/media/Weather3.PNG?raw=true)
+
 ## Deployment Kit
 
 To deploy SB_WeatherCMP to your Salesforce org, you can use Salesforce's official deployment tools like Salesforce CLI or the Salesforce Extensions for Visual Studio Code. Here's a general overview of the process:
@@ -31,6 +35,9 @@ The deployment process may take few seconds. Salesforce CLI will provide real-ti
 ## LWC Set Up
 ### Home Page
 ![HomePage setup](https://github.com/Sabristi/SB_WeatherCMP/blob/main/media/Weather4.jpg?raw=true)
-
++ Attribute ```UserTracking``` to display by default the wheather using the current user location.
+  
 ### Account Record Page
 ![AccountRecordPage setup](https://github.com/Sabristi/SB_WeatherCMP/blob/main/media/Weather5.jpg?raw=true)
++ Attribute ```locationfield``` to define in which field the City information is stored in order to display by default the weather of the city record.
++ Attribute ```lastSendingReportField``` to define in which Account field should be stored the Date Time of the last sending report in order to track it.  
