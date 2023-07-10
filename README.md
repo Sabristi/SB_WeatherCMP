@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The Weather Info Component provides a convenient way to retrieve and display weather information within the Salesforce platform, both as a standalone component on the homepage and as an integrated feature in the Account layout. The ability to send weather reports and track their delivery adds value to the solution. Furthermore, the extension to a web page offers flexibility for users outside of the Salesforce environment to access the weather information component.
+The Weather Info Component provides a convenient way to retrieve and display weather information within the Salesforce platform, both as a standalone component on the homepage and as an integrated feature in the Account layout. The ability to send weather reports and track their delivery adds value to the solution. 
 
 ![Screenshot2](https://github.com/Sabristi/SB_WeatherCMP/blob/main/media/Weather3.PNG?raw=true)
 
