@@ -39,5 +39,5 @@ The deployment process may take few seconds. Salesforce CLI will provide real-ti
   
 ### Account Record Page
 ![AccountRecordPage setup](https://github.com/Sabristi/SB_WeatherCMP/blob/main/media/Weather5.jpg?raw=true)
-+ Attribute ```locationfield``` to define in which field the City information is stored in order to display by default the weather of the customer city.
++ Attribute ```locationfield``` to define in which field the City information is stored in order to display by default the weather where the customer is located.
 + Attribute ```lastSendingReportField``` to define in which Account field should be stored the Date Time of the last sending report in order to track it.  
